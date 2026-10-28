@@ -1,0 +1,42 @@
+[
+  {
+    "fileId": "LzbEVInDDq",
+    "fileName": "tokens.css",
+    "savedFilename": "LzbEVInDDq.css",
+    "size": 2910,
+    "mimeType": "application/octet-stream",
+    "url": "http://localhost:3000/f/LzbEVInDDq.css",
+    "directUrl": "http://localhost:3000/LzbEVInDDq.css",
+    "uploadedAt": "2026-10-28T12:06:01.523Z"
+  },
+  {
+    "fileId": "VysjcFn7cS",
+    "fileName": "Screenshot_26-10-2026_162828_www.bing.com.jpeg",
+    "savedFilename": "VysjcFn7cS.jpeg",
+    "size": 205622,
+    "mimeType": "image/jpeg",
+    "url": "http://localhost:3000/f/VysjcFn7cS.jpeg",
+    "directUrl": "http://localhost:3000/VysjcFn7cS.jpeg",
+    "uploadedAt": "2026-10-28T12:01:08.248Z"
+  },
+  {
+    "fileId": "bOfbZz1mHd",
+    "fileName": "gambar.png",
+    "savedFilename": "bOfbZz1mHd.png",
+    "size": 60881,
+    "mimeType": "image/png",
+    "url": "http://localhost:3000/f/bOfbZz1mHd.png",
+    "directUrl": "http://localhost:3000/bOfbZz1mHd.png",
+    "uploadedAt": "2026-10-28T12:00:53.946Z"
+  },
+  {
+    "fileId": "vJZ0lrDapZ",
+    "fileName": "README.md",
+    "savedFilename": "vJZ0lrDapZ.md",
+    "size": 4014,
+    "mimeType": "application/octet-stream",
+    "url": "http://localhost:3000/f/vJZ0lrDapZ.md",
+    "directUrl": "http://localhost:3000/vJZ0lrDapZ.md",
+    "uploadedAt": "2026-10-28T11:59:39.327Z"
+  }
+]

@@ -1,0 +1,28 @@
+{
+  "name": "vall-cdn",
+  "version": "1.0.0",
+  "description": "Vall CDN — High-Speed Edge Asset Distribution & File Vault with MongoDB Atlas GridFS",
+  "main": "server.js",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "cdn",
+    "file-uploader",
+    "edge-storage",
+    "mongodb-atlas",
+    "gridfs",
+    "vall-cdn"
+  ],
+  "author": "Vall CDN",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.0.0",
+    "mongodb": "^7.7.0",
+    "multer": "^1.4.5-lts.1"
+  }
+}
