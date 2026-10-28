@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vall CDN: Distribusi Berkas Edge Berkecepatan Tinggi</title>
+  <meta name="description" content="Platform uploader dan CDN edge terdistribusi berkinerja tinggi untuk pengembang dan kreator." />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <!-- Telemetry Header -->
+  <header class="site-header">
+    <div class="header-inner container">
+      <div class="brand-unit">
+        <a href="/" class="brand-link" data-view="home">
+          <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="2"/>
+            <path d="m9 15 6-6"/>
+            <path d="M9 9h6v6"/>
+          </svg>
+          <span>Vall CDN</span>
+        </a>
+        <div class="telemetry-beacon">
+          <span class="beacon-dot"></span>
+          <span>node id: edge-01</span>
+        </div>
+      </div>
+      <nav class="nav-links" aria-label="Navigasi terminal">
+        <button type="button" class="nav-link active" data-view="home">Konsol</button>
+        <button type="button" class="nav-link" data-view="docs">Dokumentasi</button>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-wrapper container">
+    <main class="main-content">
+      <!-- HOME VIEW -->
+      <section id="view-home" class="view-panel">
+        <div class="hero-section">
+          <h1 class="hero-title">Vall CDN: Distribusi berkas berkecepatan tinggi</h1>
+          <p class="hero-lead">Infrastruktur CDN edge terdistribusi untuk pengembang dan kreator.</p>
+        </div>
+
+        <!-- Terminal Dropzone Stage -->
+        <div class="uploader-stage">
+          <div id="dropzone" class="terminal-box" tabindex="0" role="region" aria-label="Terminal unggah berkas">
+            <input type="file" id="fileInput" class="file-input" aria-label="Pilih berkas dari sistem" />
+            
+            <!-- Idle State -->
+            <div id="dropzoneIdle" class="dropzone-idle">
+              <div class="terminal-icon-unit">
+                <svg class="terminal-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                  <polyline points="17 8 12 3 7 8"/>
+                  <line x1="12" y1="3" x2="12" y2="15"/>
+                </svg>
+              </div>
+              <div>
+                <p class="dropzone-heading">Letakkan berkas untuk mendistribusikan ke edge</p>
+                <p class="dropzone-subtext">Klik untuk memilih dari penyimpanan lokal</p>
+              </div>
+              <div class="dropzone-tags">
+                <span class="tech-tag">Maksimal 2.00 GB</span>
+                <span class="tech-tag">Edge caching aktif</span>
+                <span class="tech-tag">Range streaming</span>
+              </div>
+            </div>
+
+            <!-- Uploading State with Telemetry Gauge -->
+            <div id="dropzoneUploading" class="dropzone-uploading" hidden>
+              <div class="gauge-wrapper">
+                <svg class="gauge-svg" viewBox="0 0 100 100" aria-hidden="true">
+                  <polygon points="50,5 90,30 90,70 50,95 10,70 10,30" class="gauge-track"/>
+                  <polygon id="gaugeBar" points="50,5 90,30 90,70 50,95 10,70 10,30" class="gauge-bar"/>
+                </svg>
+                <span id="gaugePercent" class="gauge-label">0%</span>
+              </div>
+              <div class="upload-info">
+                <span id="uploadFileName" class="upload-info-title">Memproses berkas</span>
+                <span id="uploadBytes" class="upload-info-bytes">0 B / 0 B</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Edge Vault Ledger -->
+        <section class="vault-section" aria-label="Daftar berkas terdistribusi">
+          <div class="section-header-bar">
+            <h2 class="section-label">Vault berkas edge</h2>
+            <span id="vaultCounter" class="section-counter">0 berkas tercatat</span>
+          </div>
+          <div id="emptyNotice" class="file-row">
+            <div class="file-preview-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <line x1="12" y1="2" x2="12" y2="6"/>
+                <line x1="12" y1="18" x2="12" y2="22"/>
+                <line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/>
+                <line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/>
+                <line x1="2" y1="12" x2="6" y2="12"/>
+                <line x1="18" y1="12" x2="22" y2="12"/>
+              </svg>
+            </div>
+            <div class="file-meta-col">
+              <span class="file-name-text">Belum ada transmisi berkas</span>
+              <span class="file-stats-row">Setiap berkas yang diunggah akan tercatat otomatis di node ini.</span>
+            </div>
+          </div>
+          <div id="recentList" class="vault-list"></div>
+        </section>
+
+        <!-- Technical Capabilities -->
+        <div class="features-grid">
+          <div class="feature-panel">
+            <h2 class="feature-title">Multi-format biner</h2>
+            <p class="feature-desc">Mendukung citra resolusi tinggi, rekaman audio video, dan paket arsip biner.</p>
+          </div>
+          <div class="feature-panel">
+            <h2 class="feature-title">Transmisi streaming</h2>
+            <p class="feature-desc">Mendukung protokol partial content untuk navigasi waktu video dan audio seketika.</p>
+          </div>
+          <div class="feature-panel">
+            <h2 class="feature-title">Antarmuka mesin</h2>
+            <p class="feature-desc">Endpoint terprogram untuk integrasi bot, skrip terminal, dan perayap data otomatis.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- API DEVELOPER TERMINAL VIEW -->
+      <section id="view-docs" class="view-panel docs-wrapper" hidden>
+        <header class="docs-header">
+          <h2 class="docs-title">Dokumentasi API Vall CDN</h2>
+          <p class="docs-lead">Spesifikasi antarmuka pengunggahan berkas via protokol HTTP standar.</p>
+        </header>
+
+        <div class="docs-nav-tabs" role="tablist" aria-label="Tab dokumentasi">
+          <button type="button" class="tab-btn active" data-doc-tab="overview" role="tab" aria-selected="true">Arsitektur</button>
+          <button type="button" class="tab-btn" data-doc-tab="upload" role="tab" aria-selected="false">Endpoint POST</button>
+        </div>
+
+        <div class="docs-terminal-card">
+          <!-- Overview Tab Content -->
+          <div class="doc-view-section" data-doc-sec="overview">
+            <div class="docs-section">
+              <h3 class="docs-subtitle">Prinsip kerja edge</h3>
+              <p>Vall CDN memproses pengunggahan berkas biner secara langsung ke kluster edge. Setiap berkas memperoleh pengenal permanen yang dapat diakses langsung oleh peramban atau klien HTTP.</p>
+            </div>
+
+            <div class="docs-section">
+              <h3 class="docs-subtitle">Host dasar layanan</h3>
+              <div class="base-url-well">
+                <code id="baseUrlDisplay" class="base-url-code">http://localhost:3000/</code>
+                <button type="button" id="copyBaseUrlBtn" class="action-btn" title="Salin host dasar" aria-label="Salin host dasar">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                  </svg>
+                  Salin
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Upload Tab Content -->
+          <div class="doc-view-section" data-doc-sec="upload" hidden>
+            <div class="docs-section">
+              <div class="endpoint-badge-row">
+                <span class="method-badge">POST</span>
+                <span class="endpoint-url">/upload</span>
+              </div>
+            </div>
+
+            <div class="docs-section">
+              <h3 class="docs-subtitle">Struktur payload</h3>
+              <div class="params-table-container">
+                <table class="params-table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Parameter</th>
+                      <th scope="col">Tipe</th>
+                      <th scope="col">Deskripsi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>file</code></td>
+                      <td>Binary (multipart)</td>
+                      <td>Berkas biner target unggah dengan batas volume 2.00 GB</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="docs-section">
+              <h3 class="docs-subtitle">Instruksi pemanggilan</h3>
+              <div class="code-box">
+                <div class="code-box-header">
+                  <div class="code-box-tabs">
+                    <button type="button" class="code-tab-btn active" data-lang="curl">cURL</button>
+                    <button type="button" class="code-tab-btn" data-lang="js">JavaScript</button>
+                    <button type="button" class="code-tab-btn" data-lang="python">Python</button>
+                    <button type="button" class="code-tab-btn" data-lang="go">Go</button>
+                  </div>
+                  <button type="button" id="copyCodeBtn" class="btn-code-copy" aria-label="Salin kode contoh">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                    </svg>
+                    Salin
+                  </button>
+                </div>
+                <pre class="code-pre"><code id="codeSnippet">curl -X POST http://localhost:3000/upload \
+  -F "file=@/path/to/archive.zip"</code></pre>
+              </div>
+            </div>
+
+            <div class="docs-section">
+              <h3 class="docs-subtitle">Skema respon data</h3>
+              <div class="response-grid">
+                <div class="code-box">
+                  <div class="code-box-header">
+                    <span class="file-name-text">Respon sukses (200 OK)</span>
+                  </div>
+                  <pre class="code-pre"><code>{
+  "success": true,
+  "url": "http://localhost:3000/f/k9F2pL8x.png",
+  "directUrl": "http://localhost:3000/k9F2pL8x.png",
+  "fileName": "sample.png",
+  "fileId": "k9F2pL8x",
+  "size": 184020
+}</code></pre>
+                </div>
+                <div class="code-box">
+                  <div class="code-box-header">
+                    <span class="file-name-text">Respon galat (4xx / 5xx)</span>
+                  </div>
+                  <pre class="code-pre"><code>{
+  "success": false,
+  "error": "File too large. Maximum size is 2.00GB"
+}</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Mast Footer -->
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div>
+          <span class="footer-brand">Vall CDN</span>
+          <p class="footer-slogan">Sistem distribusi berkas edge berkecepatan tinggi.</p>
+        </div>
+        <div class="footer-nav">
+          <button type="button" class="footer-link nav-link" data-view="home">Konsol</button>
+          <button type="button" class="footer-link nav-link" data-view="docs">Dokumentasi</button>
+        </div>
+      </div>
+      <div class="footer-copy">
+        <span>Hak Cipta Vall CDN</span>
+        <span>Arsitektur edge latensi rendah</span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>

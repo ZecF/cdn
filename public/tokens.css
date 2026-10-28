@@ -1,0 +1,107 @@
+:root {
+  color-scheme: dark;
+
+  /* Spacing Scale */
+  --space-3xs: 2px;
+  --space-2xs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 36px;
+  --space-2xl: 56px;
+  --space-3xl: 84px;
+  --space-4xl: 128px;
+
+  /* Typography Scale */
+  --text-xs: 0.8125rem;
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: 1.1875rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 1.875rem;
+  --text-3xl: 2.25rem;
+  --text-display: clamp(2.4rem, 4.5vw + 0.8rem, 4rem);
+  --text-section: clamp(1.75rem, 2.2vw + 0.8rem, 2.75rem);
+  --text-title: clamp(1.15rem, 0.6vw + 0.85rem, 1.45rem);
+  --text-lead: clamp(1.05rem, 0.3vw + 0.95rem, 1.25rem);
+
+  /* Animation & Transitions */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --dur-micro: 120ms;
+  --dur-short: 200ms;
+  --dur-long: 380ms;
+
+  /* Layout */
+  --container: 1200px;
+  --gutter: 32px;
+  --gap-columns: 24px;
+  --section-gap: 128px;
+
+  /* Z-index layers */
+  --z-base: 1;
+  --z-raised: 10;
+  --z-sticky-nav: 300;
+  --z-modal: 400;
+  --z-toast: 500;
+
+  /* Vantage Palette - Obsidian Blue-Black Ground + Steel Ink + Lime Signal */
+  --color-paper: oklch(13.5% 0.012 235);
+  --color-paper-2: oklch(17% 0.014 235);
+  --color-paper-3: oklch(21% 0.016 235);
+  --color-surface: oklch(16% 0.013 235);
+  --color-surface-hover: oklch(19% 0.015 235);
+  --color-surface-active: oklch(22% 0.017 235);
+
+  --color-ink: oklch(95% 0.006 230);
+  --color-ink-2: oklch(82% 0.012 230);
+  --color-muted: oklch(66% 0.016 230);
+  --color-subtle: oklch(48% 0.014 235);
+
+  --color-rule: oklch(27% 0.014 235);
+  --color-rule-2: oklch(34% 0.016 235);
+
+  /* Lime Accent */
+  --color-accent: oklch(89% 0.19 126);
+  --color-accent-hover: oklch(93% 0.17 126);
+  --color-accent-ink: oklch(16% 0.04 126);
+  --color-focus: oklch(89% 0.19 126);
+
+  --color-signal: oklch(89% 0.19 126);
+  --color-signal-wash: oklch(24% 0.05 126);
+
+  --color-emerald: oklch(89% 0.19 126);
+  --color-emerald-wash: oklch(24% 0.05 126);
+  --color-emerald-ink: oklch(89% 0.19 126);
+
+  --color-error: oklch(65% 0.22 27);
+  --color-error-wash: oklch(22% 0.06 27);
+
+  /* Code Block Colors */
+  --color-code-bg: oklch(11% 0.01 235);
+  --color-code-header: oklch(14% 0.012 235);
+  --color-code-border: oklch(24% 0.014 235);
+  --color-code-ink: oklch(92% 0.008 230);
+  --color-code-muted: oklch(60% 0.015 230);
+
+  /* Fonts */
+  --font-display: "Geologica", system-ui, -apple-system, sans-serif;
+  --font-body: "Geologica", system-ui, -apple-system, sans-serif;
+  --font-outlier: "JetBrains Mono", ui-monospace, monospace;
+
+  /* Vantage Corner Geometry */
+  --radius-card: 4px;
+  --radius-panel: 4px;
+  --radius-inner: 2px;
+  --radius-control: 2px;
+  --radius-pill: 999px;
+
+  /* Shadows (Flat depth, sharp precision) */
+  --shadow-nav: none;
+  --shadow-card: none;
+  --shadow-hover: none;
+
+  --display-weight: 300;
+  --tracking-display: -0.035em;
+}
